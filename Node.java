@@ -1,6 +1,5 @@
-import java.util.Iterable;
-
-public class Node<T> implements Iterable<Node<T>>{
+import java.util.*;
+public class Node<T> implements Iterable{
     
 	private T element;
 	private Node<T> next = null;
@@ -19,7 +18,7 @@ public class Node<T> implements Iterable<Node<T>>{
 		{
 			Node<T> tmpnext = this.next;
 			this.next = new Node<T>(element);
-			this.next.add(tmpnext);
+			this.next.next = tmpnext;
 			return this.next;
 		}
 		
@@ -48,18 +47,19 @@ public class Node<T> implements Iterable<Node<T>>{
 		this.next = nextNode;
 	}
 
-	@Override
+	
 	public boolean hasNext()
 	{
 		return this.next != null;
 	}
 
 	
-
-	public NodeIterator iterator()
+	@Override
+	public NodeIterator<T> iterator()
 	{
-        return new NodeIterator(this);
+        return new NodeIterator<T>(this);
     }
+    
 
 
 

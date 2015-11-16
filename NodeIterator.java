@@ -1,6 +1,5 @@
-import java.util.Iterator;
-
-public class NodeIterator implements Iterator<Node<T>>
+import java.util.*;
+public class NodeIterator<T> implements Iterator
 {
 	private Node<T> currentNode = null;
 	private Node<T> previousNode = null;
@@ -16,12 +15,13 @@ public class NodeIterator implements Iterator<Node<T>>
 	{
 		this.previousNode = currentNode;
 		this.currentNode = this.currentNode.getNext();
+		return this.currentNode;
 	}
 
 	@Override
 	public boolean hasNext()
 	{
-		return this.currentNode.hasNext() != null;
+		return this.currentNode.hasNext();
 	}
 
 	@Override
