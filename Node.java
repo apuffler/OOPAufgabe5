@@ -61,8 +61,6 @@ public class Node<T> implements Iterable{
     }
     
 
-
-
 	/**
      * Konstruktor von Node
      *

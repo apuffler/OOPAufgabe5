@@ -40,6 +40,4 @@ public class NodeIterator<T> implements Iterator
 		}
 
 	}
-
-
 }
