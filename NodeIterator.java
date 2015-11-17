@@ -14,9 +14,10 @@ public class NodeIterator<T> implements Iterator<T>
 	@Override
 	public T next()
 	{
+		T tmp = this.currentNode.getElement();
 		this.previousNode = currentNode;
 		this.currentNode = this.currentNode.getNext();
-		return this.currentNode.getElement();
+		return tmp;
 	}
 
 	@Override
