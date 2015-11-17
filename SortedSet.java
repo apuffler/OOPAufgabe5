@@ -13,8 +13,8 @@ public class SortedSet<T extends Smaller<? super T>> extends BasicSet<T>{
 		if(this.head == null){
 			this.head = new Node<T>(element);
 			return true;
-		}else if(!this.head.smaller(element)){
-			if(this.head == this.element)
+		}else if(!this.head.getElement().smaller(element)){
+			if(this.head == element)
 				return false;
 			Node<T> newNode = new Node<T>(element);
 			newNode.setNext(this.head);
