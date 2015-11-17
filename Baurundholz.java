@@ -10,12 +10,12 @@ public class Baurundholz extends Bauholz {
      **/ 
 	public Baurundholz(int length, int diameter)
 	{
+		super(length);
 		if (diameter < 0)
 		{
 			throw new IllegalArgumentException("Baurundholz: diameter must be positive!");
 		}
 
-		super(length);
 		this.diameter = diameter;
 	}
 
