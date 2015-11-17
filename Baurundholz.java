@@ -1,7 +1,7 @@
 import java.lang.Math;
 public class Baurundholz extends Bauholz {
     
-	private int diameter;
+	protected int diameter;
 
 	/**
      * Baurundholz, based on Bauholz.

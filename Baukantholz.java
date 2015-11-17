@@ -1,7 +1,7 @@
 public class Baukantholz extends Bauholz {
     
-	private int breadth;
-	private int height;
+	protected int breadth;
+	protected int height;
 
 	/**
      * Baukantholz, based on Bauholz.
