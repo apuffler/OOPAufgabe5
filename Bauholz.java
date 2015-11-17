@@ -1,7 +1,7 @@
 //Smaller needs generics
-public abstract class Bauholz implements Smaller<T>{
+public abstract class Bauholz implements Smaller<Bauholz>{
     
-	private int length;
+	protected int length;
 
 
 	/**
@@ -29,7 +29,7 @@ public abstract class Bauholz implements Smaller<T>{
      * Returns true if the festmeter volume of this is smaller than the arguments festmeter volume.
      * @param (x): Must NOT be NULL!
      **/ 
-	public boolean smaller(T x)
+	public boolean smaller(Bauholz x)
 	{	
 		if (x == null)
 		{
