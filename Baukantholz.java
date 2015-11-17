@@ -11,12 +11,13 @@ public class Baukantholz extends Bauholz {
      **/ 
 	public Baukantholz(int length, int breadth, int height)
 	{
+		super(length);
+		
 		if(breadth < 0 || height < 0)
 		{
 			throw new IllegalArgumentException("Baukantholz: breadth and height must be positive!");
 		}
 
-		super(length);
 		this.breadth = breadth;
 		this.height = height;
 	}
