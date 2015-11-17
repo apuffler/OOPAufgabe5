@@ -1,5 +1,6 @@
-import java.util.*;
-public class Node<T> implements Iterable{
+///import java.util.Iterable;
+
+public class Node<T>{ // } implements Iterable<Node<T>>{
     
 	private T element;
 	private Node<T> next = null;
@@ -11,21 +12,21 @@ public class Node<T> implements Iterable{
      * @param (element): Can be NULL, which indicates the end of the list.
      **/ 
 
-	public Node<T> add(T element)
+	/*public Node<T> add(T element)
 	{
 		//If you already have a next element, make space for the element to be added.
 		if(next != null)
 		{
 			Node<T> tmpnext = this.next;
 			this.next = new Node<T>(element);
-			this.next.next = tmpnext;
-			return this.next;
+			this.next.add(tmpnext);
+			return this.next.add(element);
 		}
 		
 		this.next = new Node<T>(element);
 
 		return this.next;
-	}
+	}*/
 
 	/**
      * Returns the next element of the list, if possible.
@@ -47,20 +48,13 @@ public class Node<T> implements Iterable{
 		this.next = nextNode;
 	}
 
-	
+	//@Override
 	public boolean hasNext()
 	{
 		return this.next != null;
 	}
 
 	
-	@Override
-	public NodeIterator<T> iterator()
-	{
-        return new NodeIterator<T>(this);
-    }
-    
-
 	/**
      * Konstruktor von Node
      *

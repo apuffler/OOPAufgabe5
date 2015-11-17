@@ -1,5 +1,6 @@
-import java.util.*;
-public class NodeIterator<T> implements Iterator
+import java.util.Iterator;
+
+public class NodeIterator<T> implements Iterator<T>
 {
 	private Node<T> currentNode = null;
 	private Node<T> previousNode = null;
@@ -11,11 +12,11 @@ public class NodeIterator<T> implements Iterator
 	}
 
 	@Override
-	public Node<T> next()
+	public T next()
 	{
 		this.previousNode = currentNode;
 		this.currentNode = this.currentNode.getNext();
-		return this.currentNode;
+		return this.currentNode.getElement();
 	}
 
 	@Override
@@ -40,4 +41,6 @@ public class NodeIterator<T> implements Iterator
 		}
 
 	}
+
+
 }
