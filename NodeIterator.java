@@ -23,23 +23,30 @@ public class NodeIterator<T> implements Iterator<T>
 	@Override
 	public boolean hasNext()
 	{
-		return this.currentNode == null;
+		return this.currentNode != null;
 	}
 
 	@Override
 	public void remove()
 	{
 		//Do nothing if the previousNode is null (which means this Node is the headNode)?
-		if(this.previousNode == null)
-		{
-			this.currentNode = null; //I guesss?
-		}
-		else
-		{
-
-			this.previousNode.setNext(this.currentNode.getNext());
-			this.currentNode.setNext(null); 
-		}
+		//if(this.previousNode == null)
+		//{
+		//	this.currentNode = null; //I guesss?
+		//}
+		//else
+		//{
+			if(this.previousNode == null){
+				if(this.currentNode.getNext() != null)
+					this.currentNode.setNext(this.currentNode.getNext().getNext());
+				else
+					this.currentNode = null;
+			}
+			else{
+				this.previousNode.setNext(this.currentNode.getNext());
+				this.currentNode = this.previousNode.getNext();
+			}
+		//}
 
 	}
 
