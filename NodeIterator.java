@@ -23,7 +23,7 @@ public class NodeIterator<T> implements Iterator<T>
 	@Override
 	public boolean hasNext()
 	{
-		return this.currentNode.hasNext();
+		return this.currentNode == null;
 	}
 
 	@Override
