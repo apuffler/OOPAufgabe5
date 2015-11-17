@@ -2,8 +2,8 @@ import java.lang.Iterable;
 import java.util.Iterator;
 
 public class BasicSet<T> implements Iterable<T>{
-	protected Node<T> head;
-	protected Node<T> tail;
+	public Node<T> head;
+	public Node<T> tail;
 
 	public BasicSet(){
 		this.head = this.tail = null;
@@ -17,9 +17,20 @@ public class BasicSet<T> implements Iterable<T>{
 		if(this.head == null){
 			this.head = this.tail = new Node<T>(element);
 		}else{
-			Node<T> newTail = new Node<T>(element);
-			this.tail.setNext(newTail);
-			this.tail = newTail;
+			Node<T> current = this.head;
+
+			while(current != null){
+				if(current.getElement() == element)
+					return false;
+
+				if(current.getNext() == null){
+					Node<T> newTail = new Node<T>(element);
+					current.setNext(newTail);
+					return true;
+				}
+
+				current = current.getNext();
+			}
 		}
 		return true;
 	}

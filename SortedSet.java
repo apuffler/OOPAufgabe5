@@ -25,18 +25,20 @@ public class SortedSet<T extends Smaller<? super T>> extends BasicSet<T>{
 		Node<T> previousNode = null;
 		Node<T> currentNode = this.head;
 		
-		while(currentNode.hasNext()){
+		while(currentNode != null){
 			if(!currentNode.getElement().smaller(element)){
 				if(element == currentNode.getElement())
 					return false;
-				Node<T> newNode = new Node<T>(element);
-				newNode.setNext(previousNode);
-				previousNode.setNext(newNode);
-				return true;
+				break;
 			}
 			previousNode = currentNode;
 			currentNode = currentNode.getNext();
 		}
+
+
+		Node<T> newNode = new Node<T>(element);
+		previousNode.setNext(newNode);
+		newNode.setNext(currentNode);
 		return true;
 	}
 }

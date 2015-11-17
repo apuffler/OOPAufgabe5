@@ -66,6 +66,9 @@ public class Test {
             bkhss.add(bkh);
         }
 
+        System.out.println("---------------______");
+        System.out.println(ibs.head.getNext() == null);
+
 
         // Elemente erneut ausgeben
         System.out.println("\nAusgabe von BasicSet<Integer>: \n");
@@ -85,7 +88,7 @@ public class Test {
             System.out.println("Laenge: " + bkh.length + ", Breite: " + bkh.breadth + ", Hoehe: " + bkh.height);
         }
 
-
+/*
         // 2)
 
         // Set erstellen
@@ -106,8 +109,7 @@ public class Test {
 
         // 3)
 
-
-
+*/
 
     }
 
