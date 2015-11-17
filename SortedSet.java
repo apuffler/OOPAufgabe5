@@ -1,11 +1,11 @@
 import java.util.Iterator;
 
-public class OrderedSet<T extends Smaller<? super T>> extends BasicSet<T>{
-	public OrderedSet(){
+public class SortedSet<T extends Smaller<? super T>> extends BasicSet<T>{
+	public SortedSet(){
 		super();
 	}
 
-	public OrderedSet(Node<T> headNode){
+	public SortedSet(Node<T> headNode){
 		super(headNode);
 	}
 
