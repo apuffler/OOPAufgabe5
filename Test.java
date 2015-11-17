@@ -43,8 +43,9 @@ public class Test {
         // Elemente löschen & neue einfügen
 
         Iterator<Integer> iit = ibs.iterator();
-        while (iit.hasNext())
+        while (iit.hasNext()){
             iit.remove();
+        }
         Iterator<MyInteger> mit = miss.iterator();
         while (mit.hasNext())
             mit.remove();
