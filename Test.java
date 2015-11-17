@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class Test {
 
@@ -6,7 +7,7 @@ public class Test {
         // 1)
         // Sets erstellen
         BasicSet<Integer> ibs = new BasicSet<Integer>();
-        SortedSet<MyInteger> miss = new SortedSet<MyInteger>();
+        BasicSet<MyInteger> miss = new BasicSet<MyInteger>();
         SortedSet<Baurundholz> brhss = new SortedSet<Baurundholz>();
         SortedSet<Baukantholz> bkhss = new SortedSet<Baukantholz>();
 
@@ -22,11 +23,25 @@ public class Test {
         }
 
         // Elemente ausgeben
+        System.out.println("Ausgabe von BasicSet<Integer>: \n");
         for(Integer i : ibs){
             System.out.println(i);
         }
+        System.out.println("Ausgabe von SortedSet<MyInteger>: \n");
+        for(MyInteger mi : miss){
+            System.out.println(mi.x);
+        }
+        System.out.println("Ausgabe von SortedSet<Baurundholz>: \n");
+        for(Baurundholz brh : brhss){
+            System.out.println("Laenge: " + brh.length + ", Durchmesser: " + brh.diameter);
+        }
+        System.out.println("Ausgabe von SortedSet<Baukantholz>:  \n");
+        for(Baukantholz bkh : bkhss){
+            System.out.println("Laenge: " + bkh.length + ", Breite: " + bkh.breadth + ", Hoehe: " + bkh.height);
+        }
 
         // Elemente löschen & neue einfügen
+
 
         // Elemente erneut ausgeben
 
@@ -36,10 +51,17 @@ public class Test {
         // Set erstellen
         SortedSet<Bauholz> bhss = new SortedSet<Bauholz>();
         // Elemente aus den alten Sets einlesen
-        for(Baurundholz brh : brhss)
-            bhss.add(brh);
-        for(Baukantholz bkh : bkhss)
-            bhss.add(bkh);
+        Iterator<Baurundholz> brhit = brhss.iterator();
+        while (brhit.hasNext())
+            bhss.add(brhit.next());
+        Iterator<Baukantholz> bkhit = bkhss.iterator();
+        while (bkhit.hasNext())
+            bhss.add(bkhit.next());
+        // Löschen & Einfügen von Elementen
+
+
+        // 3)
+
 
 
 
