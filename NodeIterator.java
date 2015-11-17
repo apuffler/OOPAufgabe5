@@ -38,7 +38,7 @@ public class NodeIterator<T> implements Iterator<T>
 		{
 
 			this.previousNode.setNext(this.currentNode.getNext());
-			this.currentNode.setNext(null); 
+			this.currentNode = this.previousNode.getNext();
 		}
 
 	}
