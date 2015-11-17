@@ -1,7 +1,7 @@
 /*
 Erste Überlegungen zur Herangehensweise sowie Diskussion über das Verständnis der Angabe erfolgten als Teamarbeit, sowie das Klassendiagramm.
 Armin Puffler (1225268): Node.java, NodeIterator.java (beides mit Unterstützung der Kollegen), Bauholz.java, Baurundholz.java, Baukantholz.java
-Jovan Zivanovic (1426514):
+Jovan Zivanovic (1426514): BasicSet.java, SortedSet.java, Generelles BugFixing
 Stefan Buttenhauser (0926720): Smaller.java, MyInteger.java, Test.java
 */
 
