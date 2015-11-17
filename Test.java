@@ -104,7 +104,7 @@ public class Test {
             bhss.add(bkhit.next());
 
         // Ausgabe
-        System.out.println("\nErneute Ausgabe von SortedSet<Bauholz>:");
+        System.out.println("\nAusgabe von SortedSet<Bauholz>:");
         for (Bauholz bh : bhss)
             System.out.println("Laenge: " + bh.length);
 
