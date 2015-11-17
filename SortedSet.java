@@ -10,6 +10,11 @@ public class SortedSet<T extends Smaller<? super T>> extends BasicSet<T>{
 	}
 
 	public boolean add(T element){
+		if(this.head == null){
+			this.head = new Node<T>(element);
+			return true;
+		}
+		
 		Node<T> previousNode = null;
 		Node<T> currentNode = this.head;
 		
