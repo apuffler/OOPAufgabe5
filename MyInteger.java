@@ -1,4 +1,4 @@
-public class MyInteger implements Smaller{
+public class MyInteger implements Smaller<MyInteger>{
 
     public int x;
 
@@ -6,7 +6,7 @@ public class MyInteger implements Smaller{
         this.x = x;
     }
 
-    public boolean smaller (int x){
-        return (this.x < x);
+    public boolean smaller (MyInteger other){
+        return (this.x < other.x);
     }
 }
